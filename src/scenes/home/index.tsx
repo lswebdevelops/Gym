@@ -48,7 +48,16 @@ const Home = ({ setSelectedPage }: Props) => {
                     </p>
                 </motion.div>
                 {/* Actions */}
-                <div className='mt-8 flex items-center gap-8 '>
+                <motion.div className='mt-8 flex items-center gap-8 '
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                variants={{
+                    hidden: { opacity: 0, x: -150 },
+                    visible: { opacity: 1, x: 0 },
+                }}
+                >
                     <ActionButton setSelectedPage={setSelectedPage} >
                         Join Now
                     </ActionButton>
@@ -61,12 +70,24 @@ const Home = ({ setSelectedPage }: Props) => {
                             <p>Learn More</p>
 
                     </AnchorLink>
-                </div>
+                </motion.div>
             </div>
             {/* Image */}
-            <div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'>
+            <motion.div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'
+             initial='hidden'
+             whileInView='visible'
+             viewport={{ once: true, amount: 0.5 }}
+             transition={{ duration: 0.5 }}
+             variants={{
+                 hidden: { opacity: 0, x: 150 },
+                 visible: { opacity: 1, x: 0 },
+             }}
+            
+            
+            
+            >
                 <img src={HomePageGraphic} alt="home-pageGraphic" />
-            </div>
+            </motion.div>
         </div>       
                  {/*Sponsors   */}
                  {isAboveMediumScreens && (
