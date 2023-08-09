@@ -8,6 +8,7 @@ import SponsorRedBull from '@/assets/SponsorRedBull.png'
 import SponsorForbes from '@/assets/SponsorForbes.png'
 import SponsorFortune from '@/assets/SponsorFortune.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { motion } from 'framer-motion'
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -25,8 +26,17 @@ const Home = ({ setSelectedPage }: Props) => {
             {/* main header */}
             <div className='z-10 mt-32 md:basis-3/5'>
                 {/* heading */}
-
-                <div className='md:-mt-20 '>
+                <motion.div 
+                    className='md:-mt-20 '
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -150 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                    >
                     <div className='relative'>
                         <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext '>
                             <img alt='home-page-text' src={HomePageText} />
@@ -36,7 +46,7 @@ const Home = ({ setSelectedPage }: Props) => {
                         Unrivale Gym. Unparalleled training fitness classes.Would classs 
                         Studios to get the Body Shapes that you dream of... Get your dream body now.
                     </p>
-                </div>
+                </motion.div>
                 {/* Actions */}
                 <div className='mt-8 flex items-center gap-8 '>
                     <ActionButton setSelectedPage={setSelectedPage} >
