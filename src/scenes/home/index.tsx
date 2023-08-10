@@ -80,7 +80,7 @@ const Home = ({ setSelectedPage }: Props) => {
             <motion.div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'
              initial='hidden'
              whileInView='visible'
-             viewport={{ once: true, amount: 0.5 }}
+             viewport={{ once: true, amount: 1 }}
              transition={{ duration: 0.5 }}
              variants={{
                  hidden: { opacity: 0, x: 150 },
