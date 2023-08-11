@@ -1,8 +1,8 @@
 import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
 import OurClasses from "@/scenes/ourClasses";
-import Benefits from "@/scenes/benefits/index";
-import ContactUs from "@/scenes/contactUs/index";
+import Benefits from "@/scenes/benefits/testBenefits";
+import ContactUs from "@/scenes/contactUs/testContactUs";
 import Footer from "@/scenes/footer";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
