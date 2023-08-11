@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + deployment to Cloudflare
 
 
 https://4b3276cc.gym-8c6.pages.dev/
