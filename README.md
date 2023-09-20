@@ -1,7 +1,7 @@
 # React + TypeScript + Vite + deployment to Cloudflare
 
 
-https://4b3276cc.gym-8c6.pages.dev/
+https://c62d1bb7.gym-8c6.pages.dev/
 
 
 ![Website](https://github.com/lswebdevelops/Gym/blob/main/src/assets/screenshot_gym.png)
